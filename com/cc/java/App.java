@@ -8,11 +8,14 @@ public class App {
         Worker worker = new Worker();
         Drone drone = new Drone();
         Bird bird = new Bird();
-
         pollObj(queen);
         pollObj(worker);
         pollObj(drone);
    
+        pollObj(bird); // Bird ist eine Unterklasse von HoneyBee --> Korr
+
+
+
 
         // HoneyBee ist abstrakt --> Fehler!
         // HoneyBee bee = new HoneyBee();
@@ -25,6 +28,7 @@ public class App {
     private static void pollObj(HoneyBee bee) {
         output(bee.doYourJob());
         output(bee.fly());
+        output("-------------");
     }
 
    
